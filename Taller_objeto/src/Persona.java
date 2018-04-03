@@ -17,6 +17,10 @@ public Persona(String nombre, String apellido, int edad) {
 	this.edad = edad;
 }
 
+public Persona() {
+	
+}
+
 public Persona(String nombre, String apellido, int edad, String dni, String sexo, double peso, double altura) {
 	
 	this.nombre = nombre;
@@ -30,9 +34,9 @@ public Persona(String nombre, String apellido, int edad, String dni, String sexo
 	
 }
 
-public double calcularImc(double peso, double altura) {
+public double calcularImc() {
 	
-	return peso / altura * 2;
+	return this.peso / this.altura * 2;
 }
 
 public boolean esMayor() {
@@ -43,9 +47,9 @@ public boolean esMayor() {
 	return false;
 }
 
-public int yearBorn(int edad) {
+public int yearBorn() {
 	
-	return YEAR - edad; 
+	return YEAR - this.edad; 
 }
 //Getters y Setters
 
@@ -114,7 +118,7 @@ public double getAltura() {
 }
 
 
-public void setAltura(float altura) {
+public void setAltura(double altura) {
 	this.altura = altura;
 }
 
